@@ -1397,7 +1397,7 @@
                                                         id="paypal" value="paypal" />
                                                     <label class="form-check-label" for="paypal">PayPal</label>
                                                     <div class="input-icon">
-                                                        <img src="assets/images/payment-gateway/paypal.png"
+                                                        <img src="{{ asset('fontend/assets/images/payment-gateway/paypal.png') }}"
                                                             alt="paypal" />
                                                     </div>
                                                 </div>
@@ -1409,7 +1409,7 @@
                                                     <label class="form-check-label" for="creditcard">
                                                         Stripe</label>
                                                     <div class="input-icon">
-                                                        <img src="assets/images/payment-gateway/payment-method.png"
+                                                        <img src="{{ asset('fontend/assets/images/payment-gateway/payment-method.png') }}"
                                                             alt="payment-method" />
                                                     </div>
                                                 </div>
@@ -1437,7 +1437,7 @@
                                                         id="razorpay" value="razorpay" />
                                                     <label class="form-check-label" for="razorpay">Razorpay</label>
                                                     <div class="input-icon">
-                                                        <img src="assets/images/payment-gateway/razorpay.png"
+                                                        <img src="{{ asset('fontend/assets/images/payment-gateway/razorpay.png') }}"
                                                             alt="razorpay" />
                                                     </div>
                                                 </div>
@@ -1453,7 +1453,7 @@
                                                     <label class="form-check-label" for="bank">
                                                         Bank</label>
                                                     <div class="input-icon">
-                                                        <img src="assets/images/payment-gateway/bank.png"
+                                                        <img src="{{ asset('fontend/assets/images/payment-gateway/bank.png') }}"
                                                             alt="payment-method" />
                                                     </div>
                                                 </div>
@@ -1496,7 +1496,7 @@
                                                         id="sslcommerz" value="sslcommerz" />
                                                     <label class="form-check-label" for="sslcommerz">Sslcommerz</label>
                                                     <div class="input-icon">
-                                                        <img src="assets/images/payment-gateway/sslcommerz.png"
+                                                        <img src="{{ asset('fontend/assets/images/payment-gateway/sslcommerz.png') }}"
                                                             alt="sslcommerz" />
                                                     </div>
                                                 </div>
@@ -1507,7 +1507,7 @@
                                                         value="COD" />
                                                     <label class="form-check-label" for="COD">Cash On Delivey</label>
                                                     <div class="input-icon">
-                                                        <img src="assets/images/payment-gateway/cod.jpg"
+                                                        <img src="{{ asset('fontend/assets/images/payment-gateway/cod.jpg') }}"
                                                             alt="Cash On Delivey" />
                                                     </div>
                                                 </div>

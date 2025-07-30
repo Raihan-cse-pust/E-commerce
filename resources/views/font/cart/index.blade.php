@@ -42,14 +42,12 @@
                                                         <a
                                                             href="http://127.0.0.1:8000/product/single/rosmo-namino-2"><img
                                                                 class="product-thumbnal"
-                                                                src="http://127.0.0.1:8000/uploaded_files/product_image/product-image-8.png"
+                                                                src="{{ asset('fontend/assets/images/products/tshirt.png') }}"
                                                                 alt="cart"></a>
                                                         <div class="product-flags">
-                                                                                                                                <span
-                                                                    class="product-flag sale">HOT</span>
-                                                                                                                                                                                                <span
-                                                                    class="product-flag discount">-10.00%</span>
-                                                                                                                        </div>
+                                                            <span class="product-flag sale">HOT</span>
+                                                            <span class="product-flag discount">-10.00%</span>
+                                                        </div>
                                                     </div>
                                                     <div class="product-info text-center">
                                                         <h3 class="product-name">

@@ -74,7 +74,7 @@
                 <div class="container">
                     <div class="header-middle-wrap">
                         <div class="brand-area">
-                            <a class="brand-logo" href="index.html"><img class="brand-image"
+                            <a class="brand-logo" href="{{ route('welcome') }}"><img class="brand-image"
                                     src="{{ asset('fontend/assets/images/logo.png') }}" alt="Fashionwave" /></a>
                         </div>
                         <div class="search-area">
@@ -247,12 +247,12 @@
             </div>
             <nav class="main-menu">
                 <ul class="menu-list">
-                    <li class="menu-item"><a class="menu-link" href="index.html">Home</a></li>
+                    <li class="menu-item"><a class="menu-link" href="{{ route('welcome') }}">Home</a></li>
                     <li class="menu-item"><a class="menu-link" href="{{ route('products.index') }}">Shop</a>
                     </li>
-                    <li class="menu-item"><a class="menu-link" href="about-us.html">Categories</a></li>
-                    <li class="menu-item"><a class="menu-link" href="about-us.html">About Us</a></li>
-                    <li class="menu-item"><a class="menu-link" href="/contact-us">Contact</a></li>
+                    <li class="menu-item"><a class="menu-link" href="categories.html">Categories</a></li>
+                    <li class="menu-item"><a class="menu-link" href="{{ route('about.us') }}">About Us</a></li>
+                    <li class="menu-item"><a class="menu-link" href="{{ route('contract.us') }}">Contact</a></li>
 
                 </ul>
             </nav>

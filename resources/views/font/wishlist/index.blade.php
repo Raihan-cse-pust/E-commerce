@@ -38,7 +38,7 @@
                                         <td>
                                             <div class="product-image">
                                                 <a href="/product/single/rosmo-namino-2"><img class="product-thumbnal"
-                                                        src="/uploaded_files/product_image/product-image-8.png"
+                                                        src="{{ asset('fontend/assets/images/products/tshirt.png') }}"
                                                         alt="product" /></a>
                                                 <div class="product-flags">
 
@@ -84,14 +84,14 @@
                                         </td>
                                         <td>
                                             <button class="delet-btn deleteWishlist" data-id="1" title="Delete Item">
-                                                <img src="assets/images/close.svg" alt="close" /></button>
+                                                <img src="{{ asset('fontend/assets/images/close.svg') }}" alt="close" /></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="product-image">
                                                 <a href="product-details.html"><img class="product-thumbnal"
-                                                        src="/uploaded_files/product_image/product-image-7.png"
+                                                        src="{{ asset('fontend/assets/images/products/tshirt.png') }}"
                                                         alt="product" /></a>
                                                 <div class="product-flags">
 
