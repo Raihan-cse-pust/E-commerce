@@ -1,5 +1,7 @@
 @extends('font.layout.app')
 
+@section('title', 'Terms & Conditions')
+
 @section('content')
 <!-- breadcrumb area start here  -->
     <div class="breadcrumb-area">

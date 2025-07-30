@@ -1,4 +1,5 @@
 @extends('font.layout.app')
+@section('title', 'FAQ Page')
 
 @section('content')
  <div class="breadcrumb-area">

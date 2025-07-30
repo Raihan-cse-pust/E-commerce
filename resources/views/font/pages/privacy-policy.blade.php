@@ -1,4 +1,5 @@
 @extends('font.layout.app')
+@section('title', 'Privacy Policy')
 
 @section('content')
 <!-- breadcrumb area start here  -->
