@@ -63,7 +63,7 @@
                 </div>
                 <div class="googlemap mb-5">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.3467536788835!2d90.36297567479366!3d23.806265586630474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1371cd20ff7%3A0x96197d49392ec960!2zTUlSUFVSIFNUQURJVU0gQlVTIENPVU5URVIg4Kau4Ka_4Kaw4Kaq4KeB4KawIOCmuOCnjeCmn-Cnh-CmoeCmv-Cmr-CmvOCmvuCmriDgpqzgpr7gprgg4KaV4Ka-4KaJ4Kao4KeN4Kaf4Ka-4Kaw!5e0!3m2!1sen!2sbd!4v1731517122853!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.9524269997974!2d89.60663137431834!3d23.89130557857451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe6f6791d35cd7%3A0xf46ba0905870b361!2sKadim%20Malonchi%20Bazar!5e0!3m2!1sen!2sbd!4v1753884984447!5m2!1sen!2sbd"
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -72,8 +72,8 @@
                         <h2 class="form-title">Got any questions?</h2>
                         <p class="form-subtitle">Use the form below to get in touch with the sales team</p>
                     </div>
-                    <form method="post" action="/contact-us/store">
-                        <input type="hidden" name="_token" value="z8IzV1IjwBDBzh2xk5mWIRncryxtnW1G2NyKj67x">
+                    <form method="post" action="{{ route('contract.store') }}">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">

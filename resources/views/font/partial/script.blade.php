@@ -8,11 +8,10 @@
     <script src="{{ asset('fontend/assets/js/front/sweat_aleart.js') }}"></script>
     <script src="{{ asset('fontend/assets/js/common.js') }}"></script>
     <script src="{{ asset('fontend/assets/js/admin/toastr.min.js') }}"></script>
+    <script src="{{ asset('fontend/assets/js/toastr.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-
-
-    <script>
-        toastr.options = {
+        {{-- toastr.options = {
             "closeButton": false,
             "debug": false,
             "newestOnTop": false,
@@ -28,7 +27,7 @@
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-        };
+        }; --}}
     </script>
 
     <script>

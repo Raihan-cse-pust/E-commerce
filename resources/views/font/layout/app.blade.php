@@ -18,8 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- css file  -->
     <!-- resources/views/layouts/app.blade.php -->
@@ -39,6 +38,10 @@
     <link rel="shortcut icon" href="{{ asset('fontend/assets/images/favicon.png') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ asset('fontend/admin/css/toastr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontend/assets/css/toastr.css') }}">
+    {{-- toasta cdn --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 
 </head>
 
@@ -54,12 +57,25 @@
     <!-- footer area start here -->
     <!-- footer area start here -->
     @include('font.partial.footer')
+
     <!-- footer area end here -->
     <!-- footer area end here -->
 
 
     <!-- Js file  -->
     @include('font.partial.script')
+    <script>
+    // Session messages (success, error, warning, info)
+    @if(session('success'))
+        toastr.success("{{ session('success') }}");
+    @endif
+    // Validation errors
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            toastr.error("{{ $error }}");
+        @endforeach
+    @endif
+</script>
 </body>
 
 </html>

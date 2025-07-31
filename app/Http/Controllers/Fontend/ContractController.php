@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Fontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Contract;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class SubscribeController extends Controller
+class ContractController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,7 +29,22 @@ class SubscribeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $request->validate([
+            'firstname' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:15',
+            'message' => 'required|string|max:1000',
+        ]);
+
+        Contract::create([
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'message' => $request->message,
+        ]);
+        return redirect()->back()->with('success', 'Your message has been sent successfully!');
     }
 
     /**
