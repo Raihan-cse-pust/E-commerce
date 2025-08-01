@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pages', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique();
-            $table->string('slug')->unique();
+            $table->string('title');
+            $table->string('subtitle')->nullable();
             $table->text('description')->nullable();
-            $table->string('image')->nullable()->default(null);
-            $table->string('meta_title')->nullable();
-            $table->text('meta_description')->nullable();
-            $table->text('meta_keywords')->nullable();
+            $table->string('image');
+            $table->string('link')->nullable();
+            $table->TinyInteger('status')->default(1);
+
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pages');
+        //
     }
 };

@@ -1,15 +1,17 @@
 @extends('font.layout.app')
-@section('title', 'Contract Us')
+@section('title', $data->meta_title ?? 'Contract Us')
+@section('meta_description', $data->meta_description ?? 'Contract Us of our website')
+@section('meta_keywords', $data->meta_keywords ?? 'contract, us, website')
 
 @section('content')
 <!-- breadcrumb area start here  -->
     <div class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-wrap text-center">
-                <h2 class="page-title">Contact Us</h2>
+                <h2 class="page-title">{{ $data->title ?? '' }}</h2>
                 <ul class="breadcrumb-pages">
                     <li class="page-item"><a class="page-item-link" href="http://127.0.0.1:8000">Home</a></li>
-                    <li class="page-item">Contact Us</li>
+                    <li class="page-item">{{ $data->title ?? '' }}</li>
                 </ul>
             </div>
         </div>
@@ -25,7 +27,7 @@
 
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-contact-info border-0 text-center">
-                                <img class="contact-info-icon" src="{{ asset('fontend/assets/images/contact-info-1.png') }}"
+                                <img class="contact-info-icon" src="{{ asset('fontend/assets/images/'.$data->image) }}"
                                     alt="contact-info" />
                                 <h3 class="contact-info-title">Email</h3>
                                 <p class="contact-info-content">

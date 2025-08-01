@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@yield('title', 'Home | Fashionwave - Ecommerce Website')</title>
-    <meta name="description" content="Fashionwave - Ecommerce Website" />
+    <meta name="description" content="@yield('meta_description', 'Fashionwave - Ecommerce Website')" />
     <meta name="keywords"
         content="business,eCommerce, Ecommerce, ecommerce, shop, shopify, shopify ecommerce, creative, woocommerce, design, gallery, minimal, modern, html, html5, responsive" />
     <meta name="author" content="liveprojectacademy" />
