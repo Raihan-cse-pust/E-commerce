@@ -3,6 +3,7 @@
 use App\Models\Compare;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Fontend\CartController;
+use App\Http\Controllers\Fontend\CategoryController;
 use App\Http\Controllers\Fontend\pagesController;
 use App\Http\Controllers\Fontend\CompareController;
 use App\Http\Controllers\Fontend\ProductController;
@@ -30,3 +31,4 @@ Route::get('/wishlist',[WishlistController::class, 'index'])->name('wishlist.ind
 //subscribe
 Route::post('/subscribe',[SubscriberController::class, 'store'])->name('subscribe.store');
 
+Route::get('/categories', [CategoryController::class, 'index'])->name('category.all');

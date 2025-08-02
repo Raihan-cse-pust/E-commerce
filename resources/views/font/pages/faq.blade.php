@@ -23,30 +23,23 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="accordion" id="accordionFaq">
+                        @foreach($faqs as $faq)
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading1">
+                            <h2 class="accordion-header" id="heading{{ $faq->id }}">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    What shipping methods are availbale?
+                                    data-bs-target="#collapse{{ $faq->id }}" aria-expanded="true" aria-controls="collapse{{ $faq->id }}">
+                                    {{ $faq->en_question }}
                                 </button>
                             </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                            <div id="collapse{{ $faq->id }}" class="accordion-collapse collapse show" aria-labelledby="heading{{ $faq->id }}"
                                 data-bs-parent="#accordionFaq">
                                 <div class="accordion-body">
-                                    <p class="faq-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                                        ut blandit risus. Donec mollis nec tellus consequat quam a purus faucibus
-                                        scelerisque. Mauris ac dui ante. Pellentesque congue porttitor Curabitur vel sem
-                                        mi. Proin in lobortis ipsum. Aliquam rutrum tempor ex ac rutrum. Maecenas nunc
-                                        nulla, placerat at eleifend in, viverra etos sem. Nam sagittis lacus metus,
-                                        dignissim blandit magna euismod eget. Suspendisse a nisl lacus. Phasellus eget
-                                        augue tincidunt, sollicitudin lectus sed, convallis desto. Pellentesque vitae
-                                        dui lacinia, venenatis erat sit amet, fringilla felis. Nullam maximus nisi nec
-                                        mi</p>
+                                    <p class="faq-text">{{ $faq->en_answer }}</p>
                                 </div>
                             </div>
                         </div>
 
-
+                        @endforeach
                     </div>
                 </div>
             </div>

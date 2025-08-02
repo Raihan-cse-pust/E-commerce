@@ -8,7 +8,7 @@
     <div class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-wrap text-center">
-                <h2 class="page-title">{{ $data->title ?? '' }}</h2>
+                <h2 class="page-title">{{ $data->title ?? 'hbgh' }}</h2>
                 <ul class="breadcrumb-pages">
                     <li class="page-item"><a class="page-item-link" href="http://127.0.0.1:8000">Home</a></li>
                     <li class="page-item">{{ $data->title ?? '' }}</li>
@@ -27,11 +27,11 @@
 
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="single-contact-info border-0 text-center">
-                                <img class="contact-info-icon" src="{{ asset('fontend/assets/images/'.$data->image) }}"
+                                <img class="contact-info-icon" src="{{ asset('fontend/assets/images/contact-info-1.png') }}"
                                     alt="contact-info" />
                                 <h3 class="contact-info-title">Email</h3>
                                 <p class="contact-info-content">
-                                    support@fashionwave.com
+                                {{ setting('email') }}
 
                                 </p>
                             </div>
@@ -43,9 +43,7 @@
                                     alt="contact-info" />
                                 <h3 class="contact-info-title">Address</h3>
                                 <p class="contact-info-content">
-                                    House 24, Road 17 <br />
-                                    Banani-1213
-                                    Bangladesh
+                                    {{ setting('address') }}
                                 </p>
                             </div>
                         </div>
@@ -56,7 +54,7 @@
                                     alt="contact-info" />
                                 <h3 class="contact-info-title">Phone</h3>
                                 <p class="contact-info-content">
-                                    +123 2587 1456
+                                    {{ setting('phone') }}
                                 </p>
                             </div>
                         </div>

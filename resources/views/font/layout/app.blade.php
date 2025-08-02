@@ -35,7 +35,7 @@
 
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('fontend/assets/images/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('fontend/assets/images/'.setting('favicon')) }}" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ asset('fontend/admin/css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('fontend/assets/css/toastr.css') }}">

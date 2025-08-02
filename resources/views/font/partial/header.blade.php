@@ -17,7 +17,7 @@
                                     <p class="contact-info">
                                         <i class="icon flaticon-phone"></i>
                                         Call Us:
-                                        +123 2587 7886
+                                        {{ setting('phone') }}
                                     </p>
                                 </a>
                             </div>
@@ -75,7 +75,7 @@
                     <div class="header-middle-wrap">
                         <div class="brand-area">
                             <a class="brand-logo" href="{{ route('welcome') }}"><img class="brand-image"
-                                    src="{{ asset('fontend/assets/images/logo.png') }}" alt="Fashionwave" /></a>
+                                    src="{{ asset('fontend/assets/images/'.setting('logo')) }}" alt="Fashionwave" /></a>
                         </div>
                         <div class="search-area">
                             <form action="#" method="get">
@@ -227,15 +227,12 @@
                 <form>
                     <div class="search-wrap">
                         <select class="form-select">
-                            <option selected>Categories</option>
-                            <option value="/product/category/1">
-                                Health Category</option>
-                            <option value="/product/category/2">
-                                Women Fashion</option>
-                            <option value="/product/category/3">
-                                Men Fashion</option>
-                            <option value="/product/category/4">
-                                Electronic</option>
+                        
+                           @foreach(categories() as $category)
+                                <option value="{{ $category->id }}">
+                                {{ $category->en_category_name }}
+                                </option>
+                            @endforeach
                         </select>
                         <div class="form-group">
                             <input type="text" class="form-control" id="mobilesearch" name="search"

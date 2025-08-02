@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Fontend;
 
-use App\Http\Controllers\Controller;
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class pagesController extends Controller
 {
@@ -31,6 +32,7 @@ class pagesController extends Controller
 
     public function faq(){
         $data=Page::where('slug', 'faq')->first();
-        return view('font.pages.faq',compact('data'));
+        $faqs=DB::table('faqs')->get();
+        return view('font.pages.faq',compact('data','faqs'));
     }
 }

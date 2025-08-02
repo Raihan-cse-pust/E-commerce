@@ -5,31 +5,29 @@
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
                         <div class="single-widget about-widget">
                             <a href="http://127.0.0.1:8000" class="footer-brand-logo mb-25"><img
-                                    src="{{ asset('fontend/assets/images/logo.png') }}" alt="footer-logo" /></a>
+                                    src="{{ asset('fontend/assets/images/'.setting('logo')) }}" alt="footer-logo" /></a>
                             <p class="address-text">
-                                House 24, Road 17 <br />
-                                Banani, <br />
-                                Dhaka
+                                {{ setting('address') }}
                             </p>
                             <div class="block-content mb-30">
-                                <p class="contact">Call us: +123 2587 4521</p>
-                                <p class="contact">Email: support@fashionwave.com</p>
+                                <p class="contact">Call us: {{ setting('phone') }}</p>
+                                <p class="contact">Email: {{ setting('email') }}</p>
                             </div>
                             <ul class="social-media">
                                 <li class="social-media-item">
-                                    <a target="_blank" class="social-media-link" href="www.facebook.com">
+                                    <a target="_blank" class="social-media-link" href="{{ setting('fb') }}">
                                         <i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="social-media-item">
-                                    <a target="_blank" class="social-media-link" href="www.twitter.com">
+                                    <a target="_blank" class="social-media-link" href="{{ setting('twiter') }}">
                                         <i class="fab fa-twitter"></i></a>
                                 </li>
                                 <li class="social-media-item">
-                                    <a target="_blank" class="social-media-link" href="www.linkedin.com">
+                                    <a target="_blank" class="social-media-link" href="{{ setting('linkedin') }}">
                                         <i class="fab fa-linkedin-in"></i></a>
                                 </li>
                                 <li class="social-media-item">
-                                    <a target="_blank" class="social-media-link" href="www.instagram.com">
+                                    <a target="_blank" class="social-media-link" href="{{ setting('instagram') }}">
                                         <i class="fab fa-instagram"></i></a>
                                 </li>
                             </ul>
